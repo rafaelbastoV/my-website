@@ -1,0 +1,42 @@
+@media (max-width: 768px){
+    body{
+        height:auto;
+        flex-direction: column;
+    }    
+
+    .tasklist-container{
+        padding: 20px 0px;
+    }
+}
+
+@media (max-width: 425px){
+    .tasklist-container{
+        min-width: 410px;
+    }
+
+    .container{
+        width: auto;
+    }
+
+    .calendar{
+        width: 90%;
+    }
+}
+
+@media (max-width: 500px){
+    .tasklist-container{
+        margin-top:-6rem;
+    }
+}
+
+@media (min-width: 390px) and (max-width: 844px){
+
+    body{
+        height:auto;
+        flex-direction: column;
+    }  
+    
+    .tasklist-container{
+        margin-top:-10rem;
+    }
+}
