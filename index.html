@@ -3,51 +3,80 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="mediaQueries.css">
     <title>Document</title>
 </head>
-<body>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+        *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins";
+}
+
+        body{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        body.cami{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-image: url('cami.png');
+        }
+
+        i{
+            color: red;
+            font-size: 10rem;
+            cursor: pointer;
+        }
+        h1{
+            font-size: 2rem;
+        }
+        h3{
+            opacity: 0;
+        }
+        h3.cami{
+            font-size: 2rem;
+            opacity: 1;
+            color: aqua;
+        }
+    </style>
+<body id="body">
     
-    <div class="container">
-        <div class="calendar">
-            <div class="header">
-                <div class="month">March, 2024</div>
-                <div class="btns">
-                    <div class="btn prev" id="prevBtn"><i class="fas fa-chevron-left"></i></div>
-                    <div class="btn next" id="nextBtn"><i class="fas fa-chevron-right"></i></div>
-                </div>
-            </div>
-            <div class="weekdays">
-                <div class="day">Sun</div>
-                <div class="day">Mon</div>
-                <div class="day">Tue</div>
-                <div class="day">Wed</div>
-                <div class="day">Thu</div>
-                <div class="day">Fri</div>
-                <div class="day">Sat</div>
-            </div>
-            <div class="days">
-                
-            </div>
+    <i class="fa-solid fa-heart" id="btn"></i>
+    <h1 id="h1">oi Camila, agora q eu sei que e vc, pode clicar</h1>
+    <h3 id="h3">vc eh a garota mais linda q existe</h3>
+
+    <script>
+        let password = " ";
+        do{
+            password = prompt("digite a senha").toUpperCase();
+        }while(password != "CAMILA123");    
+
+        const btn = document.getElementById('btn');
+        const body = document.getElementById("body");
+        const h1 = document.getElementById("h1");
+        const h3 = document.getElementById("h3");
+
+        function showBox(){
+            body.classList.add("cami");
+            h1.style.display = "none";
+            h3.classList.add("cami");
+        }
+
+        btn.addEventListener("click", showBox);
+  
 
 
-        </div>
-    </div>
-
-
-        <div class="tasklist-container">
-            <div class="new-task-container">
-              <input type="text" class="new-task-input" placeholder="Task to be done..."/>
-      
-              <button class="new-task-button">Add</button>
-            </div>
-      
-            <div class="tasks-container"></div>
-          </div>
-
-
+        
+    </script>
     <script src="https://kit.fontawesome.com/1b860fb822.js"crossorigin="anonymous"></script>
-    <script src="script.js"></script>
 </body>
 </html>
