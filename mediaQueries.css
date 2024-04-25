@@ -6,6 +6,20 @@
 
     .tasklist-container{
         padding: 20px 0px;
+        width: 80%;
+        justify-content: center;
+    }
+
+    .new-task-container{
+        display: flex;
+        flex-direction: column;
+        width: 22rem;
+    }
+
+    .tasks-container{
+        display: flex;
+        flex-direction: column;
+        width: 80%;
     }
 }
 

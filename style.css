@@ -160,6 +160,10 @@ body{
   padding: 30px 40px;
   width: 40%;
   min-width: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .new-task-container {
